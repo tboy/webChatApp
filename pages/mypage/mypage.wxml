@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="container">
+<web-view src="https://www.allroundshifurepair.com/wechat/authorize?returnUrl=https://www.allroundshifurepair.com/wechat/infoManager?type=2"></web-view>
+</view>
+

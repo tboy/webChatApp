@@ -1,0 +1,97 @@
+/**index.wxss**/
+.login{
+    background-color: #1aad19;
+    border-color: #1aad19;
+    color: #fff;
+    margin-top:1rem;
+    font-size:14px;
+    font-weight: 400;
+    padding: 0 22px;
+}
+.top{
+  background-color: #224994;
+  height:5rem;
+  width:100%;
+}
+
+.top image{
+  width:4rem;
+  height:4rem;
+  margin:auto;
+  display:block;
+  margin-top:0.5rem;
+}
+
+/* banner start */
+.banner-content{
+  background-image: -webkit-linear-gradient(top, #e74343, #e74343);
+  padding:25rpx 20rpx;
+}
+.swiper-content{
+  width:100%;
+  height: 480rpx;
+  overflow:hidden;
+  box-shadow: 1rpx 2rpx 8rpx #aaa;
+}
+.subcategory-fixed{
+  position:fixed;
+  z-index:99;
+}
+.category-padding{
+  padding-top: 98rpx;
+}
+/* banner end */
+/**btn**/
+
+.bigBtn {
+  margin: auto;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100%;
+  background: #224994;
+  color: white;
+  font-size: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  font-weight: 0;
+  font-family: "proxima-nova", Helvetica, Verdana, Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+  position: relative;
+  margin-top:0.5rem;
+  border-radius: 100%;
+  text-shadow: 3px 3px 0px #001d56;
+  -webkit-box-shadow: 0px 7px 0px #001d56, 0px 12px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 7px 0px #001d56, 0px 12px 0px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.bigBtn:hover,
+.bigBtn:focus {
+  -webkit-box-shadow: 0px 7px 0px #001d56, 0px 12px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 7px 0px #001d56, 0px 12px 0px rgba(0, 0, 0, 0.5);
+}
+
+.bigBtn:active {
+  top: 5px;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: .15s;
+  transition-duration: .15s;
+  -webkit-box-shadow: 0px 2px 0px #001d56, 0px 4px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 0px #001d56, 0px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.titl{
+  border-top:1px solid #ECECEC;
+  border-bottom:1px solid #ECECEC;
+  width:100%;
+  font-size:0.8rem;
+  height:2.5rem;
+  line-height:2.5rem;
+}
+.titl view{
+  float:left;
+  color:red;
+  font-size:1rem;
+  padding:0rem 0.5rem;
+}
