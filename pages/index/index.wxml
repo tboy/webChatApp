@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-	<!-- <view class="top">
+  <view class="top">
 		<image src="https://www.allroundshifurepair.com/front/assets/img/20181004152026.png"></image>
 	</view>
 
@@ -13,12 +13,79 @@
 		</block>
 	</swiper>
 
-  <view class="bigBtn" catchtap="goService">
+  <view class="bigBtn" catchtap="goOrder">
     <image style="width:50%;height:50%;display:block;margin:auto;margin-top: 2rem;" src="/assets/icon/1.png"/>
     我要下单
-  </view> -->
+  </view>
 
-  <view class="titl"><view class="iconfont icon-logo-google"></view>服务说明</view>
-  <view class="titl" style="border-bottom:0;"><view class="iconfont icon-ios-happy"></view>我们的承诺</view>
+   <view class="titl" catchtap="goDetail"><view class="iconfont icon-logo-google" style="color:red;" ></view>服务说明 <view class="iconfont icon-previewright" style="float:right;"></view></view> 
+  <view class="titl" style="border-bottom:0;">
+    <view class="iconfont icon-ios-happy"></view>收费标准</view>
+  <view class="txt">
+    <view class="t1 iconfont icon-starton"></view>
+    <view class="t2">
+      以上服务价格仅为维修技能人工费，不包含材料配件费，材料配件用户可自备，也可选择由师傅按市场价自行协商代购。
+    </view>
+  </view>
 
+  <view class="txt">
+    <view class="t1 iconfont icon-starton"></view>
+    <view class="t2">
+     操作若有高空动作，加收一定的高空操作费，最终报价由师傅和用户双方协商确定。高空费参考：3楼以上起收，50元起，5楼以上每加一层加10元，20楼以上面议。
+    </view>
+  </view>
+
+  <view class="txt">
+    <view class="t1 iconfont icon-starton"></view>
+    <view class="t2">
+      如有疑难问题需要加收维修技能人工费时，最终报价由师傅和用户双方协商确定。
+    </view>
+  </view>
+
+   <view class="txt">
+    <view class="t1 iconfont icon-starton"></view>
+    <view class="t2">
+      上门检查，报价后，如客户不接受放弃服务时，师傅会酌情收取上门费30元。
+    </view>
+  </view>
+
+  <view class="txt">
+    <view class="t1 iconfont icon-starton"></view>
+    <view class="t2">
+     按小时计费的维修项目，不足一小时按1小时计费，若实际服务时间超出1小时之外的不足一小时的按半小时计费。
+    </view>
+  </view>
+
+  <view class="titl" style="border-bottom:0;">
+    <view class="iconfont icon-ios-happy"></view>我们承诺
+  </view>
+
+  <view class="imgContents">
+    <view class="rect">
+      <image src="/assets/img/bg-list3-1.png" />
+      <view class="r1">实名认证</view>
+      <view class="r2">平台师傅100%实名认证</view>
+    </view>
+    <view class="rect">
+      <image src="/assets/img/bg-list3-2.png" />
+      <view class="r1">严格审查</view>
+      <view class="r2">经过严格审查筛选优质师傅</view>
+    </view>
+     <view class="rect">
+      <image src="/assets/img/bg-list3-3.png" />
+      <view class="r1">价格透明</view>
+      <view class="r2">价格透明，无隐形收费</view>
+    </view>
+    <view class="rect">
+      <image src="/assets/img/bg-list3-4.png" />
+      <view class="r1">质保无忧</view>
+      <view class="r2">售后质保，先行赔付</view>
+    </view>
+  </view>
+ 
+<view class="footer">
+     <button class="btn1" style="margin:0px 1px;" catchtap="goOrder">我要下单</button>
+     <button class="btn1" style="margin-right:1px;">生活服务</button>
+     <button class="btn1">个人中心</button>
+</view>
 </view>

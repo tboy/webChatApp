@@ -2,12 +2,14 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/mypage/mypage"
+    "pages/mypage/mypage",
+    "pages/services/services",
+    "pages/order/order"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "", 
+    "navigationBarTitleText": "",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"

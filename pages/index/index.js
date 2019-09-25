@@ -16,7 +16,7 @@ Page({
     slides: []
   },
   //事件处理函数
-  bindViewTap: function () {
+  bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
     })
@@ -27,12 +27,20 @@ Page({
       url: '../mypage/mypage'
     })
   },
-  onShow:function(){
+  onShow: function() {
     this.getBanner();
   },
-  onLoad: function () {
+  onLoad: function() {},
+  goDetail: function() {
+    wx.navigateTo({
+      url: '/pages/services/services',
+    })
   },
-
+  goOrder:function(){
+    wx.navigateTo({
+      url: '/pages/order/order',
+    })
+  },
   getBanner() {
     let that = this;
     app.reqHttp({
@@ -43,7 +51,11 @@ Page({
       for (let i = 0; i < res.result.length; i++) {
         let img = app.url + "/accessory/show?id=" + res.result[i].accessory;
 
-        banners.push({ title: "", description: "", image: img });
+        banners.push({
+          title: "",
+          description: "",
+          image: img
+        });
       }
       that.setData({
         slides: banners
@@ -57,7 +69,8 @@ Page({
       })
     })
   },
-  getUserInfo: function (e) {
+
+  getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({

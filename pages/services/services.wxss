@@ -1,0 +1,13 @@
+
+.rect{
+  margin-top:1rem;
+  border-top:1px solid #ECECEC;
+  width:98%;
+  font-size:0.5rem;
+  padding-top:0.5rem;
+}
+
+.rect view{
+  float:left;
+  padding-right:0.5rem;
+}

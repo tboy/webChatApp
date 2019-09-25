@@ -34,5 +34,10 @@ App({
         }
       })
     })
+  },
+  getUUid() {
+    var mydate = new Date();
+    var uuid = "cms" + mydate.getDay() + mydate.getHours() + mydate.getMinutes() + mydate.getSeconds() + mydate.getMilliseconds();
+    return uuid;
   }
 })

@@ -1,0 +1,15 @@
+<!--pages/services/services.wxml-->
+<view class="container">
+ 
+  <view>
+    <image style="height:7.6rem;width:23rem" src="/assets/img/bg-serviceinfo.png"/>
+  </view>
+  <view class="rect">
+     <view class="iconfont icon-ios-happy"></view>维修流程
+     <image src="/assets/img/bg-serviceDesc1.png"/>
+  </view>
+  <view class="rect">
+     <view class="iconfont icon-ios-happy"></view>安装流程
+     <image src="/assets/img/bg-serviceDesc2.png"/>
+  </view>
+  </view>

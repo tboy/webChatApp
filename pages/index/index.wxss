@@ -88,10 +88,79 @@
   font-size:0.8rem;
   height:2.5rem;
   line-height:2.5rem;
+  margin-top:1rem;
 }
 .titl view{
   float:left;
-  color:red;
+  color:black;
   font-size:1rem;
   padding:0rem 0.5rem;
+}
+
+.txt{
+  font-size:0.8rem;
+  margin-top:1rem;
+}
+
+.txt .t1{
+  float:left;
+  color:black;
+  font-size:1rem;
+  padding:0rem 0.5rem;
+}
+.txt .t2{
+  float:left;
+  width:88%;
+  margin-top:-0.4rem;
+  line-height:2rem;
+}
+
+.imgContents{
+  width:90%;
+  margin:auto;
+  margin-bottom: 5rem;
+}
+.rect{
+  margin-top:1rem;
+  width:49%;
+  float:left;
+  text-align: center;
+  font-size:0.6rem;
+  
+}
+
+.rect image{
+  height:9rem;
+  width:9rem;
+  display: block;
+  margin:auto;
+}
+.r1{
+ color:#323232;
+ margin-top:1rem;
+}
+.r2{
+  margin-top:1rem;
+  font-size:0.4rem;
+  color:#999;
+}
+
+.footer{
+  width:100%;
+  height:2.5rem;
+  background: white;
+  position: fixed;
+  bottom: 0;
+}
+.btn1{
+    width: 33%;
+    margin: 0;
+    height:99%;
+    line-height:2.5rem;
+    background:#488aff;
+    color:white;
+    font-size:0.8rem;
+    border-radius: 0rem;
+    padding: 0;
+    float:left;
 }
