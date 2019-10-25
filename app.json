@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/mypage/mypage",
     "pages/services/services",
-    "pages/order/order"
+    "pages/order/order",
+    "pages/live/live"
   ],
   "window": {
     "backgroundTextStyle": "light",

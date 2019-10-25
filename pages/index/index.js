@@ -41,6 +41,11 @@ Page({
       url: '/pages/order/order',
     })
   },
+  goLife:function(){
+    wx.navigateTo({
+      url: '/pages/live/live',
+    })
+  },
   getBanner() {
     let that = this;
     app.reqHttp({

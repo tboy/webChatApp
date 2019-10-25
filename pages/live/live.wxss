@@ -1,0 +1,110 @@
+/* pages/live/live.wxss */
+
+.titl{
+  border-top:1px solid #ECECEC;
+  border-bottom:1px solid #ECECEC;
+  width:100%;
+  font-size:0.8rem;
+  height:2.5rem;
+  line-height:2.5rem;
+  margin-top:1rem;
+}
+.titl view{
+  float:left;
+  color:black;
+  font-size:1rem;
+  padding:0rem 0.5rem;
+}
+
+/* pages/order/order.wxss */
+
+.row {
+  border-bottom: 1px solid #ececec;
+  height: 2.5rem;
+  padding-top: 1rem;
+  line-height: 2rem;
+  font-size: 0.9rem;
+}
+
+.lb {
+  float: left;
+  color: #1e1e1e;
+  width: 32%;
+}
+
+.need {
+  float: left;
+  display: block;
+  padding-top: 3rem;
+  padding: 0rem 0.5rem;
+  color: red;
+}
+
+.ipt {
+  float: left;
+  width: 60%;
+  padding-left: 1rem;
+  height: 2rem;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  line-height: 2rem;
+  border: 1px solid #ececec;
+}
+
+input {
+  height: 2rem;
+}
+
+.cameraBtn {
+  background: #ececec;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.2rem;
+  margin-left: 1rem;
+}
+
+.pic {
+  float: left;
+  background: #ececec;
+  width: 5rem;
+  height: 5rem;
+  margin-top: 1rem;
+  border-radius: 0.2rem;
+  margin-left: 0.5rem;
+}
+
+.pic image {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.2rem;
+}
+
+.info {
+  padding-left: 1rem;
+  margin-top: 1rem;
+  color: #c8c8cd;
+  font-size: 0.8rem;
+}
+
+.t1 {
+  width: 6rem;
+  height: 5rem;
+  float: left;
+}
+
+.t2 {
+  width: 4rem;
+  height: 5rem;
+  float: left;
+}
+
+.subBtn {
+  width: 47%;
+  border-radius: 4px;
+  height: 2.8em;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #488aff;
+  margin: 1rem auto;
+  padding: 0 1rem;
+}

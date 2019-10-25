@@ -1,0 +1,103 @@
+<!--pages/live/live.wxml-->
+<view>
+  <view class="titl" style="border-bottom:0;">
+    <view class="iconfont icon-ios-happy"></view>
+    欢迎光临
+  </view>
+  <view class="row">
+    <view class="lb">
+      <view class="need">*</view>赏金：</view>
+    <view class="ipt">
+      <input type="number" bindinput="updateTxt('contactPhone')" placeholder="请输入(亲，赏金太低会影响成交哦)" />
+    </view>
+
+  </view>
+<view class="row" style="height:6rem;">
+    <view class="lb">
+      <view class="need">*</view>服务需求：</view>
+    <view class="ipt" style="height:5rem;">
+      <textarea style="width:12rem;height:4.5rem;line-height:1rem;" bindblur="updateTxt('remark')" placeholder="包括餐饮、娱乐、租房、工作、旅游、教育培训等（赏金只作为劳动费，如生产材料费需另外支付给接单员）"></textarea>
+    </view>
+
+  </view>
+
+  <view style="border-bottom: 8px solid #ECECEC;padding-bottom:2rem;height:auto;padding-top:1rem;">
+    <view class="cameraBtn" bindtap='chooseImageTap'>
+      <view class="iconfont icon-camera" style="font-size:2rem;text-align:center;line-height:5rem;color:#666;"></view>
+    </view>
+
+
+    <view style="height:{{imgHeight}}rem;">
+      <block wx:for="{{photos}}" wx:key="id">
+        <view class="pic">
+          <image src="{{item.img}}" />
+        </view>
+      </block>
+
+    </view>
+
+    <view class="info">
+      注：照片有助于师傅了解更多维修信息
+    </view>
+  </view>
+
+<view class="row">
+    <view class="lb">
+      <view class="need">*</view>联系名称：</view>
+    <view class="ipt">
+      <input type="text" bindinput="updateTxt('contactName')" placeholder="请输入联系名称" />
+    </view>
+
+  </view>
+  <view class="row">
+    <view class="lb">
+      <view class="need">*</view>手机：</view>
+    <view class="ipt">
+      <input type="number" bindinput="updateTxt('contactPhone')" placeholder="请输入常用手机号" />
+    </view>
+
+  </view>
+  <view class="row" style="height:5rem;">
+    <view class="lb">
+      <view class="need">*</view>预约时间：</view>
+    <view class="ipt">
+      <picker mode="date" class="t1" value="{{date}}" start="2019-09-01" end="2020-09-01" bindchange="bindDateChange">
+        <view class="picker">
+          {{date}}
+        </view>
+      </picker>
+
+      <picker mode="time" class="t2" value="{{time}}" start="08:00" end="22:00" bindchange="bindTimeChange">
+        <view class="picker">
+          {{time}}
+        </view>
+      </picker>
+
+    </view>
+    <view class="info" style='text-align:left;'> 注：规定的时间段8:00-22:00下单,并且时间大于当前时间.</view>
+  </view>
+
+
+  <view class="row">
+    <view class="lb">
+      <view class="need">*</view>城市区镇：</view>
+    <view class="ipt">
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+         {{region[0]}}，{{region[1]}}，{{region[2]}}
+        </view>
+      </picker>
+    </view>
+
+  </view>
+
+  <view class="row" style="height:6rem;">
+    <view class="lb">
+      <view class="need">*</view>详细地址：</view>
+    <view class="ipt" style="height:5rem;">
+      <textarea style="width:12rem;height:4.5rem;line-height:1rem;" bindblur="updateTxt('address')" placeholder="请填写详细地址"></textarea>
+    </view>
+
+  </view>
+<button class="subBtn" catchtap='subOrder'>提交订单</button>
+</view>

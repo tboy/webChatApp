@@ -193,7 +193,7 @@ Page({
       userOpenid: this.openId, cityInfo: this.city, district: this.district, remark: this.complain, images: images, generalizeId: this.generalizeid,
       address: this.address, contactPhone: this.phoneNum, projectId: this.serviceDetailId, orderTimeStr: mytime, contactName: this.username, type: 1
     };
-  }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
