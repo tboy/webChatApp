@@ -13,19 +13,28 @@ Page({
     c2: 0,
     arr3: [],
     c3: 0,
-    complain: '',
     photos: [],
     imgHeight: 0,
     date:'2019-01-01',
-    time:'08：22',
+    beginDate:'',
+    endDate:'',
+
+    time:'08:00',
     region: ['广东省', '广州市', '海珠区'],
-    
+    remark:'',
+    contactName:'',
+    contactPhone:'',
+
 
   },
   updateTxt: function(e) {
-    this.setData({
-      complain: e.detail.value
-    })
+    let prop = e.currentTarget.dataset['mk']+"";
+    console.log(prop)
+    let obj = {};
+    obj[prop] = e.detail.value;
+    this.setData(obj)
+
+    console.log(this.data)
   },
   getAllType: function() {
 
@@ -187,18 +196,98 @@ Page({
     })
 
   },
-
+  bindDateChange:function(e){
+    this.setData({
+      date:e.detail.value
+    });
+   
+  },
+  bindTimeChange: function (e) {
+    this.setData({
+      time: e.detail.value
+    });
+  },
+  bindRegionChange:function(e){
+    this.setData({
+      region: e.detail.value
+    })
+  },
+  alert:function(str){
+    wx.showModal({
+      title: '提示',
+      content: str+"!"
+    })
+  
+  },
   subOrder:function(){
-    let param = {
-      userOpenid: this.openId, cityInfo: this.city, district: this.district, remark: this.complain, images: images, generalizeId: this.generalizeid,
-      address: this.address, contactPhone: this.phoneNum, projectId: this.serviceDetailId, orderTimeStr: mytime, contactName: this.username, type: 1
-    };
+    let images = '';
+    for (let i = 0; i < this.data.photos.length; i++) {
+      images += this.data.photos[i].id + "_";
+    }
+  
+    if (!this.data.remark || this.data.remark == '') {
+      this.alert("请填写备注")
+      return;
+    }
+    if (!this.data.contactName || this.data.contactName == '') {
+      this.alert("请输入联系名称")
+      return;
+    }
+    if (!this.data.contactPhone || this.data.contactPhone == '') {
+      this.alert("请输入常用手机号码")
+      return;
+    }
+    
+
+   
+    var mytime = this.data.date + " " + this.data.time;
+    var selTime = new Date(mytime).getTime();
+    if (selTime <= new Date().getTime()) {
+      this.alert("预约时间必须大于当前时间")
+      return;
+    }
+
+   
+
+    if (!this.data.address || this.data.address == '') {
+      this.alert("请填写详细地址")
+      return;
+    }
+    
+    let pars = {};
+    pars.userOpenid = "";
+    pars.cityInfo = this.data.region[1];
+    pars.district = this.data.region[2];
+    pars.remark = this.data.remark;
+    pars.images = images;
+    pars.generalizeId = "";
+    pars.address = this.data.address;
+    pars.contactPhone = this.data.contactPhone;
+    pars.projectId = this.data.arr3[this.data.c3].id;
+    pars.orderTimeStr = mytime;
+    pars.contactName = this.data.contactName;
+    pars.type = 1;
+    debugger;
+    console.log("提交："+pars);
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    let date = new Date();
+    
+    let y = date.getFullYear();
+    let m = date.getMonth()+1;
+    let d = date.getDate();
+    let ymd = y+"-"+(m<10?"0"+m:m)+"-"+d;
+    let ymd2 = (y + 1) + "-" + (m < 10 ? "0" + m : m) + "-" + d;
+    this.setData({
+      date:ymd,
+      beginDate:ymd,
+      endDate:ymd2
+    })
     this.getAllType();
+
   },
 
   /**

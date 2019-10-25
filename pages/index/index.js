@@ -37,9 +37,16 @@ Page({
     })
   },
   goOrder:function(){
-    wx.navigateTo({
-      url: '/pages/order/order',
-    })
+    debugger;
+    if(app.globalData.userInfo){
+      wx.navigateTo({
+        url: '/pages/order/order',
+      })
+    }else{
+      wx.navigateTo({
+        url: '/pages/authorize/authorize',
+      })
+    }
   },
   goLife:function(){
     wx.navigateTo({

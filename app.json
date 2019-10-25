@@ -5,7 +5,8 @@
     "pages/mypage/mypage",
     "pages/services/services",
     "pages/order/order",
-    "pages/live/live"
+    "pages/live/live",
+    "pages/authorize/authorize"
   ],
   "window": {
     "backgroundTextStyle": "light",
