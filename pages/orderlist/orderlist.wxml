@@ -1,0 +1,15 @@
+<!--pages/orderlist/orderlist.wxml-->
+<view class='container'>
+  <scroll-view>
+    <view wx:for='{{orderlist}}' wx:key="id" catchtap='goDetail' data-activityList='{{item}}'>
+        <view class="left">
+           <view>{{item.name}}</view>
+           <view>{{item.orderTime}}|{{item.address}}</view>
+        </view>
+        <view class="right">
+          {{item.statusStr}}|￥{{item.money}}
+        </view>
+
+    </view>
+  </scroll-view>
+</view>

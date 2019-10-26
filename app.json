@@ -6,7 +6,9 @@
     "pages/services/services",
     "pages/order/order",
     "pages/live/live",
-    "pages/authorize/authorize"
+    "pages/authorize/authorize",
+    "pages/usercenter/usercenter",
+    "pages/orderlist/orderlist"
   ],
   "window": {
     "backgroundTextStyle": "light",

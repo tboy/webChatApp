@@ -1,0 +1,43 @@
+/* pages/usercenter/usercenter.wxss */
+.head{
+  background-color: #488aff;
+  height: 4rem;
+  color:white;
+  line-height:4rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.head image{
+  width: 2.5rem;
+  height:2.5rem;
+  float:left;
+  border-radius: 100%;
+  margin:0.75rem;
+  border:3px solid white;
+}
+
+.money{
+  font-size:0.8rem;
+  padding-left:0.75rem;
+  padding-top:0.5rem;
+  height:3.5rem;
+  color:#999;
+  border-bottom: 1px solid #ececec;
+}
+.money2{
+  color:#666;
+  font-size:1rem;
+  padding-top:0.5rem;
+}
+
+.order{
+  border:1px solid #ececec;
+  width:50%;
+  text-align: center;
+  line-height:1.5rem;
+  font-size:0.6rem;
+  padding:1rem 0;
+  color:#999;
+  border-top:0;
+}

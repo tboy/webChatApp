@@ -86,6 +86,6 @@
 <view class="footer">
      <button class="btn1" style="margin:0px 1px;" catchtap="goOrder">我要下单</button>
      <button class="btn1" style="margin-right:1px;" catchtap="goLife">生活服务</button>
-     <button class="btn1">个人中心</button>
+     <button class="btn1" catchtap="goUserCenter">个人中心</button>
 </view>
 </view>

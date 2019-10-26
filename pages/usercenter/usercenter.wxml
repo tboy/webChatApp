@@ -1,0 +1,18 @@
+<view>
+
+  <view class="head">
+    <image src="{{headPortrait}}"></image>
+    {{name}}
+  </view>
+
+  <view class="money">
+  我的余额 
+  <view class="iconfont icon-previewright" style="float:right;padding-right:1rem;margin-top:1rem;"></view>
+  <view class="money2">{{amount}}元</view>
+  </view>
+
+  <view class="order"  catchtap="goOrderList">
+    <view style="color:#000;font-size:0.8rem;font-weight:bold;">我的订单</view>
+    <view>查看所有订单状态</view>
+  </view>
+</view>

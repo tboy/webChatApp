@@ -37,7 +37,6 @@ Page({
     })
   },
   goOrder:function(){
-    debugger;
     if(app.globalData.userInfo){
       wx.navigateTo({
         url: '/pages/order/order',
@@ -51,6 +50,11 @@ Page({
   goLife:function(){
     wx.navigateTo({
       url: '/pages/live/live',
+    })
+  },
+  goUserCenter:function(){
+    wx.navigateTo({
+      url: '/pages/usercenter/usercenter',
     })
   },
   getBanner() {
