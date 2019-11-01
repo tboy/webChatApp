@@ -253,22 +253,28 @@ Page({
       this.alert("请填写详细地址")
       return;
     }
-    
+    debugger
     let pars = {};
-    pars.userOpenid = "";
+    pars.userOpenid = app.openId;
     pars.cityInfo = this.data.region[1];
     pars.district = this.data.region[2];
     pars.remark = this.data.remark;
     pars.images = images;
-    pars.generalizeId = "";
     pars.address = this.data.address;
     pars.contactPhone = this.data.contactPhone;
     pars.projectId = this.data.arr3[this.data.c3].id;
-    pars.orderTimeStr = mytime;
+    pars.orderTimeStr = mytime+":00";
     pars.contactName = this.data.contactName;
     pars.type = 1;
-    debugger;
-    console.log("提交："+pars);
+    app.reqHttp({
+      url: '/orderInfo/save',
+      data: pars
+    }).then((res) => {
+      wx.navigateTo({
+        url: '/pages/orderlist/orderlist',
+      })
+    })
+    
   },
   /**
    * 生命周期函数--监听页面加载

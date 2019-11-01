@@ -74,7 +74,7 @@
     </view>
 
   </view>
-  <view class="row" style="height:5rem;">
+  <view class="row" style="height:6rem;">
     <view class="lb">
       <view class="need">*</view>预约时间：</view>
     <view class="ipt">

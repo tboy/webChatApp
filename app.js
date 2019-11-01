@@ -1,9 +1,9 @@
 //app.js
 let path = "https://www.allroundshifurepair.com";
-
+//o6YxS1sFr_zBwtLXkUu1arJHcKLs
 App({
   url: path,
-  globalData:{},
+  openId: '',
   onLaunch: function (ops) {
     const updateManager = wx.getUpdateManager()
     var self = this;
@@ -24,15 +24,28 @@ App({
         }
       })
     })
-
+    
+   
     wx.getStorage({
-      key: 'userInfo',
+      key: 'openId',
       success: function (res) {
-        self.globalData.userInfo = res.data;
+        self.openId = res.data;
       },
     })
-
   },
+
+  setOpenId:function(openId) {
+    this.openId = openId;
+    wx.setStorage({
+      key: 'openId',
+      data: openId,
+    })
+  },
+  hadLogin:function(){
+    let flag = this.openId == '' ? false : true
+    return flag;
+  },
+
   /**
   * 网络请求封装
   */

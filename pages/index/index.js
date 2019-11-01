@@ -37,20 +37,26 @@ Page({
     })
   },
   goOrder:function(){
-    if(app.globalData.userInfo){
+    if (app.hadLogin()){
       wx.navigateTo({
         url: '/pages/order/order',
       })
     }else{
-      wx.navigateTo({
-        url: '/pages/authorize/authorize',
-      })
+        wx.navigateTo({
+          url: '/pages/usercenter/usercenter',
+        })
     }
   },
   goLife:function(){
-    wx.navigateTo({
-      url: '/pages/live/live',
-    })
+    if (app.hadLogin()) {
+      wx.navigateTo({
+        url: '/pages/live/live',
+      })
+    } else {
+      wx.navigateTo({
+        url: '/pages/usercenter/usercenter',
+      })
+    }
   },
   goUserCenter:function(){
     wx.navigateTo({
@@ -76,7 +82,6 @@ Page({
       that.setData({
         slides: banners
       })
-      console.log(that.data.slides)
     }).catch(err => {
       console.log(err)
       wx.showToast({

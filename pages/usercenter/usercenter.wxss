@@ -1,11 +1,21 @@
 /* pages/usercenter/usercenter.wxss */
 .head{
   background-color: #488aff;
-  height: 4rem;
+  height: 3rem;
   color:white;
   line-height:4rem;
   font-size: 1rem;
+  padding-top:1rem;
   font-weight: 500;
+}
+.loginBtn{
+  margin:auto;
+  background:#00b26a;
+  color:white;
+  width:20%;
+  height:2rem;
+  font-size:0.8rem;
+  display: block;
 }
 
 .head image{

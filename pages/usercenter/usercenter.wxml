@@ -1,13 +1,17 @@
 <view>
 
   <view class="head">
-    <image src="{{headPortrait}}"></image>
-    {{name}}
+    <button wx:if="{{!hadLogin}}" class="loginBtn"
+     catchtap="goLogin"
+    >登录</button>
+    
+    <image style="margin-top:-0.5rem;" wx:if="{{hadLogin}}" src="{{headPortrait}}"></image>
+    <view style="margin-top:-1rem;">{{hadLogin?name:''}}</view>
   </view>
 
   <view class="money">
   我的余额 
-  <view class="iconfont icon-previewright" style="float:right;padding-right:1rem;margin-top:1rem;"></view>
+  <!-- <view class="iconfont icon-previewright" style="float:right;padding-right:1rem;margin-top:1rem;"></view> -->
   <view class="money2">{{amount}}元</view>
   </view>
 

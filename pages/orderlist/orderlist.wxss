@@ -1,1 +1,18 @@
 /* pages/orderlist/orderlist.wxss */
+.rect{
+  border-bottom: 1px solid #ececec;
+   color: #1e1e1e;
+   font-size:1rem;
+   height:3rem;
+   width:90%;
+   padding-top:1rem;
+   margin:auto;
+   background: white;
+}
+.left{
+  float:left;
+}
+.right{
+  margin-top:1.5rem;
+  float:right;
+}

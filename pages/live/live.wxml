@@ -8,7 +8,7 @@
     <view class="lb">
       <view class="need">*</view>赏金：</view>
     <view class="ipt">
-      <input type="number" bindinput="updateTxt('contactPhone')" placeholder="请输入(亲，赏金太低会影响成交哦)" />
+      <input type="number" bindblur="updateTxt" data-mk="money" placeholder="请输入(亲，赏金太低会影响成交哦)" />
     </view>
 
   </view>
@@ -16,7 +16,7 @@
     <view class="lb">
       <view class="need">*</view>服务需求：</view>
     <view class="ipt" style="height:5rem;">
-      <textarea style="width:12rem;height:4.5rem;line-height:1rem;" bindblur="updateTxt('remark')" placeholder="包括餐饮、娱乐、租房、工作、旅游、教育培训等（赏金只作为劳动费，如生产材料费需另外支付给接单员）"></textarea>
+      <textarea style="width:12rem;height:4.5rem;line-height:1rem;" bindblur="updateTxt" data-mk="remark" placeholder="包括餐饮、娱乐、租房、工作、旅游、教育培训等（赏金只作为劳动费，如生产材料费需另外支付给接单员）"></textarea>
     </view>
 
   </view>
@@ -45,7 +45,7 @@
     <view class="lb">
       <view class="need">*</view>联系名称：</view>
     <view class="ipt">
-      <input type="text" bindinput="updateTxt('contactName')" placeholder="请输入联系名称" />
+      <input type="text"  bindblur="updateTxt" data-mk="contactName" placeholder="请输入联系名称" />
     </view>
 
   </view>
@@ -53,15 +53,15 @@
     <view class="lb">
       <view class="need">*</view>手机：</view>
     <view class="ipt">
-      <input type="number" bindinput="updateTxt('contactPhone')" placeholder="请输入常用手机号" />
+      <input type="number" bindblur="updateTxt" data-mk="contactPhone"  placeholder="请输入常用手机号" />
     </view>
 
   </view>
-  <view class="row" style="height:5rem;">
+  <view class="row" style="height:6rem;">
     <view class="lb">
       <view class="need">*</view>预约时间：</view>
     <view class="ipt">
-      <picker mode="date" class="t1" value="{{date}}" start="2019-09-01" end="2020-09-01" bindchange="bindDateChange">
+      <picker mode="date" class="t1" value="{{date}}" start="{{beginDate}}" end="{{endDate}}" bindchange="bindDateChange">
         <view class="picker">
           {{date}}
         </view>
@@ -95,7 +95,7 @@
     <view class="lb">
       <view class="need">*</view>详细地址：</view>
     <view class="ipt" style="height:5rem;">
-      <textarea style="width:12rem;height:4.5rem;line-height:1rem;" bindblur="updateTxt('address')" placeholder="请填写详细地址"></textarea>
+      <textarea style="width:12rem;height:4.5rem;line-height:1rem;" bindinput="updateTxt" data-mk="address"  placeholder="请填写详细地址"></textarea>
     </view>
 
   </view>
