@@ -1,0 +1,49 @@
+<!--pages/orderdetail/orderdetail.wxml-->
+<view class="content">
+  <view class="rect">
+     <view class="lb">订单编号</view>
+     <view class="cnt">{{id}}</view>
+  </view>
+   <view class="rect">
+     <view class="lb">项目</view>
+     <view class="cnt">{{type==1?projectName:"生活订单"}}</view>
+  </view>
+   <view class="rect">
+     <view class="lb">预计收费</view>
+     <view class="cnt" wx:if="{{type==1}}">{{costOfLabor}}{{discussStr?discussStr:''}}</view>
+     <view class="cnt" wx:if="{{type==2}}">￥{{money/100}}</view>
+  </view>
+   <view class="rect">
+     <view class="lb">下单时间</view>
+     <view class="cnt">{{createTime}}</view>
+  </view>
+   <view class="rect">
+     <view class="lb">预约时间</view>
+     <view class="cnt">{{orderTime}}</view>
+  </view>
+   <view class="rect">
+     <view class="lb">联系名称</view>
+     <view class="cnt">{{contactName}}</view>
+  </view>
+   <view class="rect">
+     <view class="lb">联系电话</view>
+     <view class="cnt">{{contactPhone}}</view>
+  </view>
+   <view class="rect">
+     <view class="lb">地址</view>
+     <view class="cnt">{{detailedAddress}}</view>
+  </view>
+   <view wx:if="{{photos.length>0}}" class="rect" style="height:auto;">
+     <block  wx:for='{{photos}}'>
+        <image style="width:33%;height:5rem;" src="{{item.ionicImg}}" catchtap="showImage" data-path="{{item.ionicImg}}"></image>
+     </block>
+  </view>
+  
+   <view class="rect" style="height:auto;">
+     <view class="lb">客户备注</view>
+     <view class="cnt">{{remark}}</view>
+  </view>
+  <view class="mask" wx:if="{{isShow}}" catchtap="hideImage">
+     <image src="{{bigImg}}"/>
+  </view>
+</view>
