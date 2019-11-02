@@ -170,7 +170,6 @@ Page({
   },
 
   uplateFile: function(base64, path) {
-    var location = app.globalData.location;
     var that = this;
     var postdata = {
       type: "image",
