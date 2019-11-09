@@ -1,0 +1,69 @@
+/* pages/components/box.wxss */
+.content{
+   width:33%;float:left;
+   border-top:1px solid #ececec;
+   border-left:1px solid #ececec;
+}
+.cube-box{
+    transform-style: preserve-3d;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+.cube-box{
+   transform-origin: center center;
+}
+.cube{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width:30px;
+    height:30px;
+    background: #2d78f4;
+}
+.cube1{
+    width: 100%;
+    height: 100%;
+ 
+}
+
+.cube2{
+    width: 100%;
+    height: 100%;
+   
+ transform-origin: left top;
+    transform: rotateY(-90deg);
+}
+
+.cube3{
+    width: 100%;
+    height: 100%;
+  
+    transform-origin: right top;
+    transform: rotateY(90deg);
+}
+.cube4{
+    width: 100%;
+    height: 100%;
+   
+    transform-origin: right top;
+    transform: translateZ(30px);
+}
+
+.cube5{
+    width: 100%;
+    
+  
+    transform-origin: left top;
+    transform: rotateX(90deg);
+}
+.cube6{
+    width: 100%;
+ 
+ 
+  
+    top: inherit;
+    bottom: 0;
+    transform-origin: left bottom;
+    transform: rotateX(-90deg);
+}
