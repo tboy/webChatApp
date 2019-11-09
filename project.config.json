@@ -99,6 +99,13 @@
 					"id": -1,
 					"name": "pages/usercenter/usercenter",
 					"pathName": "pages/usercenter/usercenter",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/logs/logs",
+					"pathName": "pages/logs/logs",
 					"scene": null
 				}
 			]

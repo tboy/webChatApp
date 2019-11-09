@@ -9,7 +9,10 @@ Page({
     hadLogin: false,
     headPortrait: "",
     name:"",
-    amount:"0"
+    amount:"0",
+    arr1:[],
+    boxs:[],
+    time:null,
   },
 
   goOrderList: function () {
@@ -26,10 +29,33 @@ Page({
       url: '/pages/authorize/authorize',
     })
   },
+  getAllType: function () {
+   
+    let that = this;
+    app.reqHttp({
+      url: '/projectInfo/getAllType',
+      data: {}
+    }).then((res) => {
+      var list = res.result;
+      for(var i=0;i<list.length;i++){
+        list[i].ionic = app.url + "/accessory/show?id=" + list[i].ionic;
+      }
+      that.setData({
+        arr1: list
+      })
+      that.change1(-1);
+    }).catch(err => {
+      wx.showToast({
+        title: JSON.stringify(err),
+        icon: "none"
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.getAllType();
     let that = this;
     if (app.hadLogin()) {
       that.setData({
@@ -55,7 +81,18 @@ Page({
         hadLogin:false
       })
     } 
- 
+    
+    let idx = 0;
+    clearInterval(this.data.time)
+     this.setData({time:setInterval(function () {
+      if(idx==360) idx=0;
+      for (var i = 0; i < that.data.arr1.length; i++) {
+        that.selectComponent("#bx" + i).setDir(idx);
+      }
+      
+        idx+=5;
+     }, 1000 / 24)});
+
   },
 
   /**
@@ -103,6 +140,8 @@ Page({
         hadLogin: false
       })
     } 
+
+    
    
   },
 

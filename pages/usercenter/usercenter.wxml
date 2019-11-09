@@ -19,4 +19,7 @@
     <view style="color:#000;font-size:0.8rem;font-weight:bold;">我的订单</view>
     <view>查看所有订单状态</view>
   </view>
+  <view style="margin-left:0rem;">
+     <box class="box"   wx:for='{{arr1}}' wx:key="id" catchtap='goDetail' class="rect" data-typeList='{{item}}' obj="{{item}}" id="bx{{index}}"/>
+  </view>
 </view>
